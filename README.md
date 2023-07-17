@@ -1,11 +1,12 @@
 # Classification
 ## Introduction
-<img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/82f04a85-bd78-4282-af97-d50e257d6499" width="380">   
+<img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/bb4f0ec9-c925-4d49-ba71-1a64442e2ec2" width="380">   
+
 
 - The fundamental objective of classification is to make `predictions about the category or class` (represented by y) based on given inputs (represented by x).
 - It is one of the most widely used techniques in machine learning, with a broad array of applications, including sentiment analysis, ad targeting, spam detection, risk assessment, medical diagnosis, and image classification.
 
-![Dogs vs cats](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/da6a5b78-14e2-4264-a443-110bf933db3a)
+![Dogs vs cats](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/a3ac2d07-3562-4887-9664-2aa91d79c548)
 
 ### How Image Classification actually works:
 
