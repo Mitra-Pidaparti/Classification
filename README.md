@@ -237,7 +237,7 @@ Not satisfied with this accuracy? Well, there are ways you can improve it
 ## Resources:
 - **Medium** articles are awesome. I suggest you subscribe if possible
 - [Codebasics](https://www.youtube.com/@codebasics) playlists are pretty cool
-- You can audit **Coursera** courses
+- You can audit **Coursera** courses(option where you can view the content for free without certification)
   
   
 
