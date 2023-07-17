@@ -5,9 +5,7 @@
 - The fundamental objective of classification is to make `predictions about the category or class` (represented by y) based on given inputs (represented by x).
 - It is one of the most widely used techniques in machine learning, with a broad array of applications, including sentiment analysis, ad targeting, spam detection, risk assessment, medical diagnosis, and image classification.
 
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/e9a81b90-b3f5-4017-b4a4-51b40b76df9d)
-
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/a442485c-44fa-44e7-b82d-d6ca8ec4df8c)
+![Dogs vs cats](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/da6a5b78-14e2-4264-a443-110bf933db3a)
 
 #### Feature Extraction: 
 In the classification of dogs and cats, feature extraction involves analyzing distinguishing characteristics such as ear texture, fur texture, snout, and nose structure. These features are identified and extracted to capture unique attributes that differentiate between the two animal classes.
