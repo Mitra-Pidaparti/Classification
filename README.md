@@ -7,8 +7,13 @@
 
 ![Dogs vs cats](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/da6a5b78-14e2-4264-a443-110bf933db3a)
 
+How it basically works:
 #### Feature Extraction: 
 In the classification of dogs and cats, feature extraction involves analyzing distinguishing characteristics such as ear texture, fur texture, snout, and nose structure. These features are identified and extracted to capture unique attributes that differentiate between the two animal classes.
+![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/8d881544-b3ef-42b1-973e-79a2fc832d0c)
+
+[More about feature extraction](https://towardsdatascience.com/convolutional-neural-network-feature-map-and-filter-visualization-f75012a5a49c)
+
 #### Training and Learning: 
 A machine learning algorithm is employed to learn from a carefully labeled dataset of dog and cat images, where each instance is associated with the corresponding class label. By training on this dataset, the algorithm discovers patterns and correlations between the extracted features and the respective animal classes.
 #### Prediction: 
@@ -136,6 +141,7 @@ model.summary()
 ```{python}
 visualkeras.layered_view(model)
 ```
+![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/fffe9dbe-abe0-49cc-a65f-8c67bb8decf4)
 
 
 #### Training the model
@@ -167,8 +173,15 @@ print(accuracy)
 Not satisified with this accuracy? Well, there are ways you can improve it
 
 - Of course, Adding more layers to your model increases its ability to learn your dataset’s features more deeply, helping it to extract more complex features from the image
-- Getting more data: Duh :)
-- Here is an additional method called Transfer Learning:
+- Getting more data, also Image augmentation is a technique that is used to artificially expand the data-set to reduce over-fitting
+- Here is an additional method called Transfer Learning, its like using pre-trained knowledge to solve a new problem.
+  Check this article out for [Transfer Learning](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a)
+
+## Resources:
+- **Medium** articles are awesome. I suggest you subscribe if possible
+- [Codebasics](https://www.youtube.com/@codebasics) playlists are pretty cool
+- You can audit **Coursera** courses
+  
   
 
 
