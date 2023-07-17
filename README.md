@@ -9,10 +9,10 @@
 
 ### How Image Classification actually works:
 
-So we already learnt about CNN's lets see how they are actually used in Image Classification:
+So we already learned about CNN's let us see how they are actually used in Image Classification:
 #### Feature Extraction: 
 - Feature maps are the output of the convolutional layers in the network. A feature map represents the presence or activation of specific features or patterns in the input image.
-- When an image is passed through a CNN, the convolutional layers perform a series of convolutions by applying a set of learnable filters to the input image. Each filter detects specific patterns or features, such as edges, textures, or shapes, at different spatial locations in the input.
+- When an image is passed through a CNN, the convolutional layers perform a series of convolutions by applying a set of learnable filters to the input image. Each `filter detects specific patterns or features at different spatial locations in the input, such as edges, textures, or shapes`.
 - The result of these convolutions is a set of feature maps. Each feature map corresponds to a specific filter and represents the response or activation of that filter across the spatial dimensions of the input image. Each location in a feature map contains information about the presence or strength of a particular feature detected by the corresponding filter.
 
 ![image1](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/8d881544-b3ef-42b1-973e-79a2fc832d0c)
@@ -37,8 +37,8 @@ Above are 64 feature maps extracted using CNN. Notice how each feature map focus
 ### Image Preprocessing:
  Often a  critical and underappreciated step in the image classification pipeline. While much focus is placed on the model architecture and training process, image preprocessing plays a vital role in improving the quality and effectiveness of the model.
 
-- Image preprocessing is the steps taken to format images before they are used by model training and inference. This includes, but is not limited to, `resizing, orienting, and color corrections`
-- Fully connected layers in convolutional neural networks, a common architecture in computer vision, require that all images are the same sized arrays. If your images are not in the same size, your model may not perform as expected
+- Image preprocessing is the steps taken to format images before they are used by model training and inference. This includes but is not limited to, `resizing, orienting, and color corrections
+- Fully connected layers in convolutional neural networks, a typical architecture in computer vision, require that all images are the `same sized arrays`. If your images are not in the same size, your model may not perform as expected
 
 ```{python}
 import cv2
@@ -68,7 +68,7 @@ plt.show()
 - Learning OpenCV libray is pretty useful: Here is the documentation, play around with some images:)[OpenCV](https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html)
 
 **Image Augmentation**:
-- Image augmentation creates diverse versions of similar images through transformations like rotation, brightness, and scale changes. By exposing the model to a broader range of training examples, it learns to recognize subjects in different situations, enhancing its ability to handle real-world variations. This expands the training dataset, improving model generalization and performance.
+- Image augmentation `creates diverse versions of similar images through transformations like rotation, brightness, and scale changes`. By exposing the model to a broader range of training examples, it learns to recognize subjects in different situations, enhancing its ability to handle real-world variations. This expands the training dataset, improving model generalization and performance.
 - `Image Augmentation is only applied to the training set`
 - The `ImageDataGenerator` class from Keras generates batches of image data with real-time data augmentation.
   Example: For an image like this:
