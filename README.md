@@ -65,8 +65,9 @@ plt.subplot(122), plt.imshow(resize_img), plt.title("Resized Image")
 plt.show()
 ```
 
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/bdd4ef81-8cc0-4789-a48e-17ddc33a0aad)
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/b88c5ee9-7b1e-462a-a959-63dc58b8ab86)
+![Height,widht](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/42d053eb-eb79-41fb-9037-14dcbf59f8d8)
+
+
 
 - Learning OpenCV libray is pretty useful: Here is the documentation, play around with some images:)[OpenCV](https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html)
 
@@ -76,13 +77,15 @@ plt.show()
 - The `ImageDataGenerator` class from Keras generates batches of image data with real-time data augmentation.
   Example: For an image like this:
   
-  ![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/7e53bf77-b28d-45b4-968e-55a1e405b1bb)
+![Airplane](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/4c3d90fc-1565-40ea-adbc-d6358c50c269)
+
 
   
-We can perform bunch of operations to give these kind of images:
+We can perform a bunch of operations to give these kinds of images:
 
 
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/52a70fdc-3a81-4748-8807-7e723801cb28)
+![airplaneaugmented](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/12dc420c-80d7-4112-a974-55abe3350aa6)
+
 
 
   
