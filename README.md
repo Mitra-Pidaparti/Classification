@@ -66,10 +66,11 @@ plt.show()
 ```
 
 ![Height,widht](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/42d053eb-eb79-41fb-9037-14dcbf59f8d8)
+![Resized Image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/a74fe301-af78-4f0f-86bc-148504dc39c4)
 
 
 
-- Learning OpenCV libray is pretty useful: Here is the documentation, play around with some images:)[OpenCV](https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html)
+- Learning the OpenCV library is pretty useful: Here is the documentation, play around with some images:)[OpenCV](https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html)
 
 **Image Augmentation**:
 - Image augmentation `creates diverse versions of similar images through transformations like rotation, brightness, and scale changes`. By exposing the model to a broader range of training examples, it learns to recognize subjects in different situations, enhancing its ability to handle real-world variations. This expands the training dataset, improving model generalization and performance.
@@ -93,7 +94,7 @@ We can perform a bunch of operations to give these kinds of images:
 - Some new terms: `True Positives, True Negatives, False Positives, False Negatives`:
 Here is an example:
 
-<img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/6efc7fa5-d636-43dc-9a2a-1b72700212f9" width="500"> 
+<img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/f9f91f40-8303-42b5-948f-160b8c54e210" width="500"> 
 
 - True Positive (TP): The patient is diseased and the model predicts "diseased"
 - False Positive (FP): The patient is healthy but the model predicts "diseased"
@@ -103,10 +104,11 @@ Here is an example:
 For a better understanding of Confusion Matrix: [Confusion Matrix](https://youtu.be/Kdsp6soqA7o)
 
   Now, here are some metrics for evaluation that use the above
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/836327cd-f818-4e39-9e3d-9f9e8733e218)
+
+
 
 **When to use which metric?**
-- Accuracy is obviously the most straight- forward as it tells us the fraction of how many predictions were right
+- Accuracy is obviously the most straight-forward as it tells us the fraction of how many predictions were right
 but accuracy is not necessarily the best. Check this article out: [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
 
 
@@ -154,7 +156,8 @@ for images, labels in test_generator:
         plt.title(int(labels[i]))
         plt.axis("off")
 ```
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/9f9c9a09-8b3a-4dd9-bec8-681b660e9710)
+
+![DatasetVis](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/0ef1ea46-0f47-4083-80fc-1a2e8a8b9087)
 
 
 
@@ -195,7 +198,7 @@ model.summary()
 ```{python}
 visualkeras.layered_view(model)
 ```
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/fffe9dbe-abe0-49cc-a65f-8c67bb8decf4)
+![Model_viz](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/d6812b9d-7cb7-4fdf-9c2f-4d75271e50c5)
 
 
 #### Training the model
@@ -214,7 +217,7 @@ plt.ylabel('Score')
 plt.legend()
 plt.show()
 ```
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/0b3de64c-a4d9-4697-a1d2-cf8fa7d997b7)
+![Traininplot](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/43a6aa9c-30a7-42fe-bfad-388626cedb1d)
 
 ####  Evaluating on the Test Dataset
 ```{python}
@@ -222,13 +225,13 @@ res = model.evaluate(test_generator)
 accuracy = res[1]
 print(accuracy)
 ```
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/42718f2c-bb0c-431f-81ac-7effc05ab36a)
+![loss](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/3f7c1358-2f7c-466b-9d1f-7e7335f939c3)
 
 Not satisfied with this accuracy? Well, there are ways you can improve it
 
 - Of course, Adding more layers to your model increases its ability to learn your dataset’s features more deeply, helping it to extract more complex features from the image
 - Getting more data, also Image augmentation will help.
-- Here is an additional method called `Transfer Learning`, its like using pre-trained knowledge to solve a new problem.
+- Here is an additional method called `Transfer Learning`, it's like using pre-trained knowledge to solve a new problem.
   Check this article out for [Transfer Learning](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a)
 
 ## Resources:
