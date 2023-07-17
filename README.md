@@ -1,6 +1,6 @@
 # Classification
 ## Introduction
-<img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/bb4f0ec9-c925-4d49-ba71-1a64442e2ec2" width="380">   
+<img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/bb4f0ec9-c925-4d49-ba71-1a64442e2ec2" width="400">   
 
 
 - The fundamental objective of classification is to make `predictions about the category or class` (represented by y) based on given inputs (represented by x).
@@ -16,10 +16,12 @@ So we already learned about CNN's let us see how they are actually used in Image
 - When an image is passed through a CNN, the convolutional layers perform a series of convolutions by applying a set of learnable filters to the input image. Each `filter detects specific patterns or features at different spatial locations in the input, such as edges, textures, or shapes`.
 - The result of these convolutions is a set of feature maps. Each feature map corresponds to a specific filter and represents the response or activation of that filter across the spatial dimensions of the input image. Each location in a feature map contains information about the presence or strength of a particular feature detected by the corresponding filter.
 
-![image1](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/8d881544-b3ef-42b1-973e-79a2fc832d0c)
+![FeatureExtract](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/6dd2bcaf-0791-49e8-8803-52d340395699)
 
 
-![image2](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/b1629daf-148a-4552-a016-c1a658a58ea4)
+
+![Pytorch Feature Extraction](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/4b8a93d3-f641-4b9d-b765-c441649310f1)
+
 
 Above are 64 feature maps extracted using CNN. Notice how each feature map focuses on different things and highlights different aspects of the image
 
