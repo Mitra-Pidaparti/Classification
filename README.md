@@ -7,17 +7,29 @@
 
 ![Dogs vs cats](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/da6a5b78-14e2-4264-a443-110bf933db3a)
 
-How it basically works:
+### How Image Classification actually works:
+
+So we already learnt about CNN's lets see how they are actually used in Image Classification:
 #### Feature Extraction: 
-In the classification of dogs and cats, feature extraction involves analyzing distinguishing characteristics such as ear texture, fur texture, snout, and nose structure. These features are identified and extracted to capture unique attributes that differentiate between the two animal classes.
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/8d881544-b3ef-42b1-973e-79a2fc832d0c)
+- Feature maps are the output of the convolutional layers in the network. A feature map represents the presence or activation of specific features or patterns in the input image.
+- When an image is passed through a CNN, the convolutional layers perform a series of convolutions by applying a set of learnable filters to the input image. Each filter detects specific patterns or features, such as edges, textures, or shapes, at different spatial locations in the input.
+- The result of these convolutions is a set of feature maps. Each feature map corresponds to a specific filter and represents the response or activation of that filter across the spatial dimensions of the input image. Each location in a feature map contains information about the presence or strength of a particular feature detected by the corresponding filter.
+
+![image1](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/8d881544-b3ef-42b1-973e-79a2fc832d0c)
+
+
+![image2](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/b1629daf-148a-4552-a016-c1a658a58ea4)
+Above are 64 feature maps extracted using CNN. Notice how each feature map focuses on different things and highlights different aspects of the image
 
 [More about feature extraction](https://towardsdatascience.com/convolutional-neural-network-feature-map-and-filter-visualization-f75012a5a49c)
 
+
 #### Training and Learning: 
-A machine learning algorithm is employed to learn from a carefully labeled dataset of dog and cat images, where each instance is associated with the corresponding class label. By training on this dataset, the algorithm discovers patterns and correlations between the extracted features and the respective animal classes.
+- The next step is to train a classification model using the extracted features. This involves adding fully connected layers on top of the convolutional layers to learn the relationship between the features and classes. The model is trained with labeled images, optimizing its parameters through backpropagation and gradient descent. Hyperparameters like learning rate, batch size, and regularization are adjusted to improve performance.
+#### Evaluation: 
+- After training, the model's performance is evaluated using a separate set of test images using various evaluation metrics.
 #### Prediction: 
-Once the model is trained, it can be utilized to classify new, unseen images of dogs and cats. By examining the distinct features of these images, the model applies its learned knowledge to accurately predict whether an image depicts a dog or a cat, enabling seamless and reliable classification.
+ - After training and evaluation, the model can classify new images. It takes an input image, applies preprocessing, extracts features using the trained CNN, and predicts the class label based on learned relationships. This allows the model to make informed decisions when classifying unseen images.
 
 
 
