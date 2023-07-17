@@ -218,11 +218,11 @@ print(accuracy)
 ```
 ![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/42718f2c-bb0c-431f-81ac-7effc05ab36a)
 
-Not satisified with this accuracy? Well, there are ways you can improve it
+Not satisfied with this accuracy? Well, there are ways you can improve it
 
 - Of course, Adding more layers to your model increases its ability to learn your dataset’s features more deeply, helping it to extract more complex features from the image
-- Getting more data, also Image augmentation is a technique that is used to artificially expand the data-set to reduce over-fitting
-- Here is an additional method called Transfer Learning, its like using pre-trained knowledge to solve a new problem.
+- Getting more data, also Image augmentation will help.
+- Here is an additional method called `Transfer Learning`, its like using pre-trained knowledge to solve a new problem.
   Check this article out for [Transfer Learning](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a)
 
 ## Resources:
