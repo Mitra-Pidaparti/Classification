@@ -19,36 +19,73 @@ So we already learnt about CNN's lets see how they are actually used in Image Cl
 
 
 ![image2](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/b1629daf-148a-4552-a016-c1a658a58ea4)
+
 Above are 64 feature maps extracted using CNN. Notice how each feature map focuses on different things and highlights different aspects of the image
 
 [More about feature extraction](https://towardsdatascience.com/convolutional-neural-network-feature-map-and-filter-visualization-f75012a5a49c)
 
 
 #### Training and Learning: 
-- The next step is to train a classification model using the extracted features. This involves adding fully connected layers on top of the convolutional layers to learn the relationship between the features and classes. The model is trained with labeled images, optimizing its parameters through backpropagation and gradient descent. Hyperparameters like learning rate, batch size, and regularization are adjusted to improve performance.
+- The next step is to train a classification model using the extracted features. This involves adding fully connected layers on top of the convolutional layers to `learn the relationship between the features and classes`. The model is trained with labeled images, optimizing its parameters through backpropagation and gradient descent. Hyperparameters like learning rate, batch size, and regularization are adjusted to improve performance.
+  
 #### Evaluation: 
 - After training, the model's performance is evaluated using a separate set of test images using various evaluation metrics.
-#### Prediction: 
- - After training and evaluation, the model can classify new images. It takes an input image, applies preprocessing, extracts features using the trained CNN, and predicts the class label based on learned relationships. This allows the model to make informed decisions when classifying unseen images.
-
-
-
-## Binary Classification
-- Binary classification is a common machine learning technique that categorizes inputs into two distinct categories, making it the simplest form of classification
-- The following are a few binary classification applications, where the 0 and 1 columns are two possible classes for each observation:
-![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/85046681-b0cc-4554-bfab-c58cb7f27cde)
-- Some popular model algorithms commonly used for binary classification tasks:
   
-- Logistic Regression
-- Support Vector Machines (SVM)
-- Decision Trees
-- Gradient Boosting models (e.g., XGBoost, LightGBM)
+#### Prediction: 
+ - After training and evaluation, the model can classify new images. It takes an input image, applies preprocessing, extracts features using the trained CNN, and `predicts the class label based on learned relationships`. This allows the model to make informed decisions when classifying unseen images.
+
+### Image Preprocessing:
+ Often a  critical and underappreciated step in the image classification pipeline. While much focus is placed on the model architecture and training process, image preprocessing plays a vital role in improving the quality and effectiveness of the model.
+
+- Image preprocessing is the steps taken to format images before they are used by model training and inference. This includes, but is not limited to, `resizing, orienting, and color corrections`
+- Fully connected layers in convolutional neural networks, a common architecture in computer vision, require that all images are the same sized arrays. If your images are not in the same size, your model may not perform as expected
+
+```{python}
+import cv2
+import matplotlib.pyplot as plt
+
+img = cv2.imread('birds.jpg')
+h, w, c = img.shape
+print(f"Height and width of original image: {h}, {w}" )
+
+#resize the image
+new_size = (450, 340) # new_size=(width, height)
+print(f"New height and width: {new_size[1]}, {new_size[0]}" )
+resize_img = cv2.resize(img, new_size)
+
+ #Convert the images from BGR to RGB
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+resize_img = cv2.cvtColor(resize_img, cv2.COLOR_BGR2RGB)
+
+plt.subplot(121),plt.imshow(img), plt.title("Original Image")
+plt.subplot(122), plt.imshow(resize_img), plt.title("Resized Image")
+plt.show()
+```
+
+![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/bdd4ef81-8cc0-4789-a48e-17ddc33a0aad)
+![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/b88c5ee9-7b1e-462a-a959-63dc58b8ab86)
+
+- Learning OpenCV libray is pretty useful: Here is the documentation, play around with some images:)[OpenCV](https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html)
+
+**Image Augmentation**:
+- Image augmentation creates diverse versions of similar images through transformations like rotation, brightness, and scale changes. By exposing the model to a broader range of training examples, it learns to recognize subjects in different situations, enhancing its ability to handle real-world variations. This expands the training dataset, improving model generalization and performance.
+- `Image Augmentation is only applied to the training set`
+- The `ImageDataGenerator` class from Keras generates batches of image data with real-time data augmentation.
+  Example: For an image like this:
+  
+  ![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/7e53bf77-b28d-45b4-968e-55a1e405b1bb)
+
+  
+We can perform bunch of operations to give these kind of images:
+
+
+![image](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/52a70fdc-3a81-4748-8807-7e723801cb28)
+
+
   
 ### Evaluation Metrics:
-Now that the prediction of the class is done, how do we evaluate the model?
-
-Before that lets learn some new terms: `True Positives, True Negatives, False Positives, False Negatives`:
-Lets use the above Medical Diagnosis example:
+- Some new terms: `True Positives, True Negatives, False Positives, False Negatives`:
+Here is an example:
 
 <img align="right" src="https://github.com/Mitra-Pidaparti/Classification/assets/110911635/6efc7fa5-d636-43dc-9a2a-1b72700212f9" width="500"> 
 
@@ -65,7 +102,6 @@ For a better understanding of Confusion Matrix: [Confusion Matrix](https://youtu
 **When to use which metric?**
 - Accuracy is obviously the most straight- forward as it tells us the fraction of how many predictions were right
 but accuracy is not necessarily the best. Check this article out: [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
-
 
 
 
