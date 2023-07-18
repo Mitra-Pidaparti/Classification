@@ -212,25 +212,30 @@ visualkeras.layered_view(model)
 ```{python}
 # Create an instance of EarlyStopping callback
 es = keras.callbacks.EarlyStopping(monitor='val_loss', patience=7, restore_best_weights=True, verbose=1)
-# EarlyStopping stops training if validation loss does not improve for 7 consecutive epochs
-# restore_best_weights=True restores the model weights to the best found during training
-# verbose=1 prints messages about the progress of early stopping
-
+```
+- EarlyStopping stops training if validation loss does not improve for 7 consecutive epochs
+- restore_best_weights=True restores the model weights to the best found during training
+- verbose=1 prints messages about the progress of early stopping
+```
+```{python}
 # Create an instance of ReduceLROnPlateau callback
 red_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', patience=3, factor=0.1, verbose=1)
-# ReduceLROnPlateau reduces learning rate if validation loss does not improve for 3 consecutive epochs
-# factor=0.1 determines the factor by which the learning rate will be reduced (multiplied by 0.1)
-# verbose=1 prints messages about the learning rate reduction
-
+```
+- ReduceLROnPlateau reduces learning rate if validation loss does not improve for 3 consecutive epochs
+- factor=0.1 determines the factor by which the learning rate will be reduced (multiplied by 0.1)
+- verbose=1 prints messages about the learning rate reduction
+```
+```{python}
 # Start model training
 logs = model.fit(train_generator, epochs=50, validation_data=test_generator, validation_steps=2000/32, callbacks=[es, red_lr])
-# model.fit trains the model using the provided data generators for training and validation
-# epochs=50 specifies the number of training epochs (complete passes through the training data)
-# validation_data=test_generator provides the data generator for the validation set
-# validation_steps=2000/32 determines the number of steps (batches) to evaluate the validation data (2000 samples divided by batch size 32)
-# callbacks=[es, red_lr] passes the EarlyStopping and ReduceLROnPlateau callbacks to monitor the training progress and apply necessary actions
-
 ```
+- model.fit trains the model using the provided data generators for training and validation
+- epochs=50 specifies the number of training epochs (complete passes through the training data)
+- validation_data=test_generator provides the data generator for the validation set
+- validation_steps=2000/32 determines the number of steps (batches) to evaluate the validation data (2000 samples divided by batch size 32)
+- callbacks=[es, red_lr] passes the EarlyStopping and ReduceLROnPlateau callbacks to monitor the training progress and apply necessary actions
+
+
 #### Plotting Training History
 ```{python}
 plt.title('Training Log')
