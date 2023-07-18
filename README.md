@@ -101,9 +101,12 @@ Here is an example:
 - True Negative (TN): The patient is healthy and the model predicts "healthy"
 - False Negative (FN): The patient is diseased and the model predicts "healthy"
 
-For a better understanding of Confusion Matrix: [Confusion Matrix](https://youtu.be/Kdsp6soqA7o)
+For a better understanding of Confusion Matrix: [Confusion Matrix](https://youtu.be/Kdsp6soqA7o)-->
 
   Now, here are some metrics for evaluation that use the above
+
+  ![Evaluation metrics](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/809fa922-9ab6-4b8b-921d-489e61a3a916)
+
 
 
 
