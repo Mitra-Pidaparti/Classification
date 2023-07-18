@@ -94,6 +94,7 @@ When to use: [When to use](https://blog.roboflow.com/why-preprocess-augment/)
 ### Evaluation Metrics:
 - Some new terms: `True Positives, True Negatives, False Positives, False Negatives`:
 Here is an example:
+![Application of binary](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/d17c74b9-14e8-4a2d-baa5-17d4a7372f41)
 
 
 
