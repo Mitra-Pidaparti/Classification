@@ -216,7 +216,6 @@ es = keras.callbacks.EarlyStopping(monitor='val_loss', patience=7, restore_best_
 - EarlyStopping stops training if validation loss does not improve for 7 consecutive epochs
 - restore_best_weights=True restores the model weights to the best found during training
 - verbose=1 prints messages about the progress of early stopping
-```
 ```{python}
 # Create an instance of ReduceLROnPlateau callback
 red_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', patience=3, factor=0.1, verbose=1)
@@ -224,7 +223,6 @@ red_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', patience=3, facto
 - ReduceLROnPlateau reduces learning rate if validation loss does not improve for 3 consecutive epochs
 - factor=0.1 determines the factor by which the learning rate will be reduced (multiplied by 0.1)
 - verbose=1 prints messages about the learning rate reduction
-```
 ```{python}
 # Start model training
 logs = model.fit(train_generator, epochs=50, validation_data=test_generator, validation_steps=2000/32, callbacks=[es, red_lr])
