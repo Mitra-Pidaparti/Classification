@@ -88,7 +88,7 @@ We can perform a bunch of operations to give these kinds of images:
 ![airplaneaugmented](https://github.com/Mitra-Pidaparti/Classification/assets/110911635/12dc420c-80d7-4112-a974-55abe3350aa6)
 
 How to code these:[Augmentation](https://towardsdatascience.com/image-data-augmentation-for-deep-learning-77a87fabd2bf#:~:text=Image%20augmentation%20comes%20in%20many,%2C%20and%20Zoom%20In%2FOut.)
-When to use: [When to use](https://blog.roboflow.com/why-preprocess-augment/)
+, [When to use](https://blog.roboflow.com/why-preprocess-augment/)
 
   
 ### Evaluation Metrics:
